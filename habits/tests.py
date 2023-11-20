@@ -11,7 +11,7 @@ class HabitTestCase(APITestCase):
     def setUp(self) -> None:
         # создаем тестового пользователя
         self.user = User.objects.create(user_email='admin@sky.pro')
-        self.user.set_password('dima123')
+        self.user.set_password('qwerty123456')
         self.user.save()
 
         # аутентифицируем пользователя
@@ -21,7 +21,7 @@ class HabitTestCase(APITestCase):
         """ тестирование создания привычки """
 
         # отправляем запрос на аутентификацию пользователя
-        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "dima123"})
+        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "qwerty123456"})
         self.access_token = response.json().get("access")
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
@@ -66,7 +66,7 @@ class HabitTestCase(APITestCase):
         """ тестирование списка привычек """
 
         # отправляем запрос на аутентификацию пользователя
-        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "dima123"})
+        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "qwerty123456"})
         self.access_token = response.json().get("access")
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
@@ -111,7 +111,7 @@ class HabitTestCase(APITestCase):
         """ тестирование информации о привычке """
 
         # отправляем запрос на аутентификацию пользователя
-        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "dima123"})
+        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "qwerty123456"})
         self.access_token = response.json().get("access")
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
@@ -150,7 +150,7 @@ class HabitTestCase(APITestCase):
         """ тестирование изменения привычки """
 
         # отправляем запрос на аутентификацию пользователя
-        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "dima123"})
+        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "qwerty123456"})
         self.access_token = response.json().get("access")
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
@@ -195,7 +195,7 @@ class HabitTestCase(APITestCase):
         """ тестирование удаления привычки """
 
         # отправляем запрос на аутентификацию пользователя
-        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "dima123"})
+        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "qwerty123456"})
         self.access_token = response.json().get("access")
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
@@ -226,7 +226,7 @@ class PrizeTestCase(APITestCase):
     def setUp(self) -> None:
         # создаем тестового пользователя
         self.user = User.objects.create(user_email='admin@sky.pro')
-        self.user.set_password('dima123')
+        self.user.set_password('qwerty123456')
         self.user.save()
 
         # аутентифицируем пользователя
@@ -236,7 +236,7 @@ class PrizeTestCase(APITestCase):
         """ тестирование создания награды """
 
         # отправляем запрос на аутентификацию пользователя
-        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "dima123"})
+        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "qwerty123456"})
         self.access_token = response.json().get("access")
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
@@ -276,7 +276,7 @@ class PrizeTestCase(APITestCase):
         """ тестирование списка наград """
 
         # отправляем запрос на аутентификацию пользователя
-        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "dima123"})
+        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "qwerty123456"})
         self.access_token = response.json().get("access")
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
@@ -311,7 +311,7 @@ class PrizeTestCase(APITestCase):
         """ тестирование информации о награде """
 
         # отправляем запрос на аутентификацию пользователя
-        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "dima123"})
+        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "qwerty123456"})
         self.access_token = response.json().get("access")
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
@@ -345,7 +345,7 @@ class PrizeTestCase(APITestCase):
         """ тестирование изменения награды """
 
         # отправляем запрос на аутентификацию пользователя
-        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "dima123"})
+        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "qwerty123456"})
         self.access_token = response.json().get("access")
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
@@ -385,7 +385,7 @@ class PrizeTestCase(APITestCase):
         """ тестирование удаления награды """
 
         # отправляем запрос на аутентификацию пользователя
-        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "dima123"})
+        response = self.client.post('/users/token/', {"user_email": "admin@sky.pro", "password": "qwerty123456"})
         self.access_token = response.json().get("access")
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
