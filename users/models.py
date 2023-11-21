@@ -10,6 +10,7 @@ class User(AbstractUser):
     user_phone = models.CharField(max_length=35, verbose_name='телефон', blank=True, null=True)
     user_avatar = models.ImageField(upload_to='media/', verbose_name='аватар', blank=True, null=True)
     user_city = models.CharField(max_length=100, verbose_name='город', blank=True, null=True)
+    chat_id = models.CharField(max_length=100, verbose_name='телеграм', blank=True, null=True)
     is_active = models.BooleanField(choices=VERSION_CHOICES, default=True, verbose_name='Статус пользователя')
 
     USERNAME_FIELD = "user_email"
